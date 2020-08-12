@@ -1,0 +1,13 @@
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).exe
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).deps.json
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).runtimeconfig.json
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).runtimeconfig.dev.json
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).dll
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\bin\Debug\netcoreapp3.1\Task_Processing(TPL).pdb
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).csprojAssemblyReference.cache
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).AssemblyInfoInputs.cache
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).AssemblyInfo.cs
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).csproj.CoreCompileInputs.cache
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).dll
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).pdb
+C:\Users\Training\source\repos\Threading\Task_Processing(TPL)\obj\Debug\netcoreapp3.1\Task_Processing(TPL).genruntimeconfig.cache
