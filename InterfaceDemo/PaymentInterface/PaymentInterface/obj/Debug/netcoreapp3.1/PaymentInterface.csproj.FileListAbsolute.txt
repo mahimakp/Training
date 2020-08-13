@@ -1,0 +1,9 @@
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.AssemblyInfoInputs.cache
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.AssemblyInfo.cs
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.csproj.CoreCompileInputs.cache
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\bin\Debug\netcoreapp3.1\PaymentInterface.deps.json
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\bin\Debug\netcoreapp3.1\PaymentInterface.dll
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\bin\Debug\netcoreapp3.1\PaymentInterface.pdb
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.dll
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.pdb
+C:\Users\Training\source\repos\PaymentInterface\PaymentInterface\obj\Debug\netcoreapp3.1\PaymentInterface.csprojAssemblyReference.cache
