@@ -1,0 +1,16 @@
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.exe
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.deps.json
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.runtimeconfig.json
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.runtimeconfig.dev.json
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.dll
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeyword.pdb
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeywordClassLibrary.dll
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\bin\Debug\netcoreapp3.1\StaticKeywordClassLibrary.pdb
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.csprojAssemblyReference.cache
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.AssemblyInfoInputs.cache
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.AssemblyInfo.cs
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.csproj.CoreCompileInputs.cache
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.csproj.CopyComplete
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.dll
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.pdb
+C:\Users\Training\source\repos\StaticKeyword\StaticKeyword\obj\Debug\netcoreapp3.1\StaticKeyword.genruntimeconfig.cache

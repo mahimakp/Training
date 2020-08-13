@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "StaticKeyword/1.0.0": {
+        "dependencies": {
+          "StaticKeywordClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "StaticKeyword.dll": {}
+        }
+      },
+      "StaticKeywordClassLibrary/1.0.0": {
+        "runtime": {
+          "StaticKeywordClassLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StaticKeyword/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StaticKeywordClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
