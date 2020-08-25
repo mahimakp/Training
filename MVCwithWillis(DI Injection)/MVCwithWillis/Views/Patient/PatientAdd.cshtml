@@ -1,0 +1,119 @@
+﻿@model PatientAddViewModel
+
+@{
+    Layout = null;
+    var x = 0;
+    x++;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PatientAdd</title>
+</head>
+
+<body>
+    <form method="post" action="/Patient/AddPatient">
+        <label>Patient Name: </label>
+        <input type="text" name="name" value="" /> <br />
+        <label>Patient Address:</label>
+        <input type="text" name="address" value="" /> <br />
+        <input type="submit" name="name" value="Add patient" />
+    </form> <br />
+
+    <form method="post" action="/Patient/AddProblems">
+        <label>Problems : </label>
+        <input type="text" name="problem" value="" /> <br />
+        <input type="submit" name="name" value="Add problems" />
+    </form>
+    <br />
+    <form method="post" action="/Patient/AddTreatments">
+        <label>Name of Medicines : </label>
+        <input type="text" name="medicineName" value="" /><br />
+        <br />
+        <label>Doses :</label>
+        <input type="text" name="numberOfTimesInDay" value=""/><br />
+        <input type="submit" value="Add Treatment" />
+    </form>
+
+    <br /><br />
+    <form method="post" action="/Patient/AddToProblems">
+        <input type="submit" value="Add to problems" />
+    </form>
+    <br />
+    <form method="post" action="/Patient/AddFinal">
+        <input type="submit" value="Add final" />
+    </form>
+
+    @if (!(Model.currentPatient is null))
+    {
+        @Model.currentPatient.name<br />
+        @Model.currentPatient.address<br />
+        <ul>
+            @foreach (var item in Model.currentPatient.problems)
+            {
+            <li>
+                @item.problem
+
+                @foreach (var treat in item.treatments)
+                {
+                    @treat.medicineName
+                    @treat.numberOfTimesInDay
+
+                }
+
+            </li>
+               
+
+            }
+
+        </ul>
+    }
+
+
+
+    <table>
+        <tr>
+            <td><h4>Name</h4></td>
+            <td><h4>Address</h4></td>
+        </tr>
+
+        @foreach (var pat in Model.allPatients)
+        {
+            <tr>
+                <td>@pat.name</td>
+                <td>@pat.address</td>
+            </tr>
+            <td>
+                <table>
+                    <tr><td><h4>Problems :</h4></td></tr>
+                    @foreach (var prob in pat.problems)
+                    {
+                        <br />
+                        <tr>
+                            <td>
+                                @prob.problem
+                            </td>
+                        </tr>
+                        <tr><td><h4>Treatment: </h4></td></tr>
+                        @foreach (var treatment in prob.treatments)
+                        {
+                            <tr>
+                                <td>
+                                    @treatment.medicineName
+                                </td>
+                                <td>
+                                    @treatment.numberOfTimesInDay
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </td>
+        }
+
+    </table>
+</body>
+</html>
