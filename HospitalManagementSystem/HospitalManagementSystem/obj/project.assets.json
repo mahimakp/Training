@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "HospitalModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/HospitalModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HospitalModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "HospitalModel/1.0.0": {
+      "type": "project",
+      "path": "../HospitalModel/HospitalModel.csproj",
+      "msbuildProject": "../HospitalModel/HospitalModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "HospitalModel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Training\\.nuget\\packages\\": {}
@@ -32,7 +51,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Training\\source\\repos\\HospitalManagementSystem\\HospitalModel\\HospitalModel.csproj": {
+              "projectPath": "C:\\Users\\Training\\source\\repos\\HospitalManagementSystem\\HospitalModel\\HospitalModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

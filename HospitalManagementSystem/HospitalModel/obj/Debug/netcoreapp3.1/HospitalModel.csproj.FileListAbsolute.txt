@@ -1,0 +1,9 @@
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.deps.json
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.dll
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\bin\Debug\netcoreapp3.1\HospitalModel.pdb
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.csprojAssemblyReference.cache
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.AssemblyInfoInputs.cache
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.AssemblyInfo.cs
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.csproj.CoreCompileInputs.cache
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.dll
+C:\Users\Training\source\repos\HospitalManagementSystem\HospitalModel\obj\Debug\netcoreapp3.1\HospitalModel.pdb

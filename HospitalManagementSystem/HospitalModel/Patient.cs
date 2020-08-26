@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HospitalModel
 {
     public class Patient
     {
+        [Required]
         public string name { get; set; }
         public string address { get; set; }
-        public int phoneNumber { get; set; }
+
+        [Required]
+        public long phoneNumber { get; set; }
 
         public List<Allergy> allergies = new List<Allergy>();
 
@@ -22,32 +26,8 @@ namespace HospitalModel
 
     }
 
-    public class Allergy
-    {
-        public string allergyName { get; set; }
-        public string allergyDescription { get; set; }
-        public int allergyDuration { get; set; }
-        public Patient patient { get; set; }
+    
 
-    }
-
-    public class Problem
-    {
-        public string problemName { get; set; }
-        public string problemDescription { get; set; }
-        public int problemDuration { get; set; }
-        
-      
-    }
-
-    public class Visit
-    {
-        public int visits = 0;
-    }
-
-    public class Treatment
-    {
-        public string medicineName { get; set; }
-        public int doses { get; set; }
-    }
+   
+    
 }
