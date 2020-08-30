@@ -1,7 +1,9 @@
 ﻿using HospitalModel;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 namespace HospitalManagementSystem
 {
@@ -20,6 +22,11 @@ namespace HospitalManagementSystem
             patient1.address = "Nagpur";
             patient1.phoneNumber = 9673630000;
 
+            iPaymentMethods payfees = patient1.PayFees(0);
+
+            payfees.AmountToBePaid = 1000;
+            payfees.PaidAmount = 1000;
+            Console.WriteLine(payfees.Payment());
 
             //Multiple problems for patient1
             Problem problem1 = new Problem();
@@ -48,6 +55,36 @@ namespace HospitalManagementSystem
                 Console.WriteLine(item.problemName + " " + item.problemDescription + " " + item.problemDuration);
             }
 
+
+           
+            //Doctor info
+
+            Doctor d1 = new Doctor();
+
+            d1.SetName("Dr. Drake Ramoray");
+            d1.SetDoj("13 May 1997");
+            d1.SetDepartment("Doctor");
+            d1.SetAvaliablity(true);
+            d1.SetSpecialization("Neurosurgeon");
+
+            if (d1.GetAvailiablity() == true)
+            {
+                Console.WriteLine(d1.GetDoctorInfo());
+            }
+            else
+            {
+                throw new Exception("Not Available");
+            }
+
+
+            
+
+           
+
+            //Patients patientsList = new Patients(patient1); 
+            
+            //foreach (Patient p in patientsList)
+            //    Console.WriteLine(p.firstName + " " + p.lastName);
         }
     }
 }

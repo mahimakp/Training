@@ -13,12 +13,15 @@ namespace HospitalModel
     public class Staff
     {
 
-        protected string name { get; set; }
-        protected int dateOfJoining { get; set; }
-        protected string department { get; set; }
+        protected string name;
+
+        protected string dateOfJoining;
+
+        protected string department;
 
         Salary salary = new Salary();
 
+        
         public double StaffSalary()
         {
             return salary.GetSalary();

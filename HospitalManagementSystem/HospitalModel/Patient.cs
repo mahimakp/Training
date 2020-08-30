@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HospitalModel
 {
-    public class Patient
+    public class Patient 
     {
         [Required]
         public string name { get; set; }
@@ -23,7 +23,20 @@ namespace HospitalModel
 
         public List<Nurse> nurses = new List<Nurse>();
 
+        public iPaymentMethods PayFees(int option)
+        {
 
+            if (option == 0)
+            {
+                return new PayByCash();
+            }
+            else
+            {
+                return new PayOnline();
+            }
+
+
+        }
     }
 
     
