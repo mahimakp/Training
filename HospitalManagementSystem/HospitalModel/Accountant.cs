@@ -7,7 +7,7 @@ namespace HospitalModel
 {
     class Accountant : Staff
     {
-        public double amount { get; set; }
+        private double amount = 10000;
 
         Salary salary;
         

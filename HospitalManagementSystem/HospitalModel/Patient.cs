@@ -15,7 +15,7 @@ namespace HospitalModel
 
         public List<Allergy> allergies = new List<Allergy>();
 
-        public List<Problem> problems = new List<Problem>();
+        //public List<Problem> problems = new List<Problem>();
 
         public Doctor doctor { get; set; }
 
@@ -23,6 +23,8 @@ namespace HospitalModel
 
         public List<Nurse> nurses = new List<Nurse>();
 
+        public List<Visit> visitList = new List<Visit>();
+        public bool visits { get; set; }
         public iPaymentMethods PayFees(int option)
         {
 

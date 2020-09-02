@@ -9,6 +9,11 @@ namespace HospitalModel
     {
         Salary salary = new Salary();
 
+        internal string specialization { get; set; }
+
+        internal List<Patient> patients = new List<Patient>();
+        internal bool availability;
+
         public void SetName(string name)
         {
             this.name = name;
@@ -23,10 +28,7 @@ namespace HospitalModel
         {
             this.department = deptName;
         }
-        public string GetDoctorInfo()
-        {
-            return ("Name : " + this.name + "Date of Joining : " + this.dateOfJoining + "Department :" + this.department);
-        }      
+       
         public bool GetAvailiablity()
         {
             return this.availability;
@@ -50,14 +52,16 @@ namespace HospitalModel
         {
             this.patients = p;
         }
-        internal string specialization { get; set; }
-
-        internal List<Patient> patients = new List<Patient>();
-        internal bool availability;
-
+        
         public string AttendsPatient()
         {
             return "Prescribe medication/treatment to patient";
+        }
+
+        public string GetDoctorInfo()
+        {
+            return ("Name : " + this.name + "\nDate of Joining : " + this.dateOfJoining + "\nDepartment :" + this.department + 
+                "/nSpecialization : " + this.specialization + "/nPatients :"+this.patients);
         }
     }
 
