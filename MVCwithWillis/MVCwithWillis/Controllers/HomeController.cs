@@ -25,16 +25,16 @@ namespace MVCwithWillis.Controllers
 
         public IActionResult Index()
         {
-            byte[] y = null;
+            //byte[] y = null;
 
-            PatientWithAddressCheck x1 = new PatientWithAddressCheck();
-            // security
-            if (HttpContext.Session.TryGetValue("valueofi",out y)) // 10 seconds
-            {
-                i = (int)HttpContext.Session.GetInt32("valueofi");
-            }
-            i++;
-            HttpContext.Session.SetInt32("valueofi",  i);
+            //PatientWithAddressCheck x1 = new PatientWithAddressCheck();
+            //// security
+            //if (HttpContext.Session.TryGetValue("valueofi",out y)) // 10 seconds
+            //{
+            //    i = (int)HttpContext.Session.GetInt32("valueofi");
+            //}
+            //i++;
+            //HttpContext.Session.SetInt32("valueofi",  i);
             
             
             

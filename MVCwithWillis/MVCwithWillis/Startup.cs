@@ -1,13 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using HospitalRepository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using PatientLibrary;
 
 namespace MVCwithWillis
@@ -19,20 +25,67 @@ namespace MVCwithWillis
             Configuration = configuration;
         }
 
+            
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime.
         //Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IPatient, Patient>();
-            services.AddSession(options =>
+            services.AddCors(o => o.AddPolicy("MyCorsPolicy", builder =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(60);
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
+                builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                        
+            }));
+
+            services.AddMvc();
+
+           
+            services.AddDbContext<HospitalDbContext>(
+                options =>
+                {
+                    options.UseSqlServer(Configuration["ConnectionStrings"]);
+                }
+                );
+
+            services.AddSingleton<IPatient, Patient>();
+            //services.AddSession(options =>
+            //{
+            //    options.IdleTimeout = TimeSpan.FromSeconds(60);
+            //    options.Cookie.HttpOnly = true;
+            //    options.Cookie.IsEssential = true;
+            //});
             services.AddControllersWithViews();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                   .AddJwtBearer(options =>
+                   {
+                       options.TokenValidationParameters = new TokenValidationParameters
+                       {
+                           ValidateIssuer = true,
+                           ValidateAudience = true,
+                           ValidateLifetime = true,
+                           ValidateIssuerSigningKey = true,
+                           ValidIssuer = "Mahima",
+                           ValidAudience = "Mahima",
+                           IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MahimaMahimaMahima"))
+                       };
+
+                       options.Events = new JwtBearerEvents
+                       {
+                           OnMessageReceived = context =>
+                           {
+                               if (context.Request.Path.Value.StartsWith("/Home"))
+                               {
+                                   context.Token = context.Request.Query["tokenString"];
+                               }
+                               return Task.CompletedTask;
+                           }
+                       };
+                   });
+
         }
 
         // This method gets called by the runtime. 
@@ -55,21 +108,23 @@ namespace MVCwithWillis
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseCors("MyCorsPolicy");
+            app.UseAuthentication();
             app.UseAuthorization();
-            app.UseSession();
+            //app.UseSession();
             app.UseEndpoints(endpoints =>
             {
 
             // loaded from databases
             // Dynamically from DB
-              endpoints.MapControllerRoute(name: "Home",
-              pattern: "",
-              defaults: new { controller = "Patient", action = "Add" });
+              //endpoints.MapControllerRoute(name: "Home",
+              //pattern: "",
+              //defaults: new { controller = "Patient", action = "Add" });
 
-                endpoints.MapControllerRoute(name: "Patient",
-               pattern: "Patient/New",
-               defaults: new { controller = "Patient", action = "Add" });
+              //  endpoints.MapControllerRoute(name: "Patient",
+              // pattern: "Patient/New",
+              // defaults: new { controller = "Patient", action = "Add" });
+
 
                 endpoints.MapControllerRoute(
                     name: "default",
