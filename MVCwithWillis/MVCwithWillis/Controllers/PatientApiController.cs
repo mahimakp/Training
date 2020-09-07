@@ -51,6 +51,8 @@ namespace MVCwithWillis.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] List<PatientDTO> objDto)
         {
+            HttpContext.Session.SetString("key","value");
+            
 
             foreach (var item in objDto)
             {
